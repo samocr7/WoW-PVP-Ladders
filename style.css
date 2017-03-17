@@ -1,0 +1,33 @@
+li{
+    color: white;
+    font-weight: bold;
+    padding: 5px 5px 5px 5px;
+}
+h1{
+    text-align: center;
+    padding-bottom: 0px;
+    text-decoration: underline;
+}
+img{
+    height: 50px;
+    width: 50px;
+}
+header{
+    text-align: center;
+    font-size: 40px;
+}
+ol{
+    text-align: center;
+    list-style-position: inside;
+}
+a{
+color:inherit;
+}
+body{
+background-color:darkslategray;
+}
+footer{
+    padding-top: 20px;
+    text-align: center;
+        color:MediumBlue;
+}
