@@ -8,19 +8,19 @@ function getData(){$.ajax({
        success: function(data){
     console.log(data);
            //console.log(data.rows[0]);
-           for(var i=0; i<101; i++){
+           for(var i=0; i<100; i++){
             
 var name = data.rows[i].name;
 var server = data.rows[i].realmName;
 var realmSlug = data.rows[i].realmSlug;
         
 var profile = 'https://us.battle.net/wow/en/character/'+realmSlug+'/'+name+'/simple';
+var placement = document.getElementById("Ladder");
 $(placement).append("<li id= Rank"+i+"></li>");
     
            var pClass = getClassName(data.rows[i].classId, i);
             var spec = getSpecName(data.rows[i].specId);
            var rating = data.rows[i].rating;
-           var placement = document.getElementById("Ladder");
             var linkProfile = document.getElementById("Rank"+i);
                $(linkProfile).html("<a href="+profile+">"+name+"</a>"+"-"+server+" "+spec+" "+pClass+" " +rating);
            }
@@ -42,7 +42,7 @@ function getClassName(id, i){
             return "Warrior";
                 break;
         case 2: 
-            //classColour.style.color="Pink";
+            classColour.style.color="Pink";
             return "Paladin";
                 break;
         case 3: 
